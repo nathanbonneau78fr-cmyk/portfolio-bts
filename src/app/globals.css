@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #0d0f11;
+  --background: #fafbfc;
+  --primary: #01599f;
+  --primary-foreground: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #f0f2f5;
+    --background: #0d0f11;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+/* Accessibilité : focus visible */
+*:focus-visible {
+  @apply outline-2 outline-offset-2 outline-primary-600;
+}
+
+/* Lisibilité pour le jury */
+.prose-custom {
+  @apply text-neutral-800 leading-relaxed;
+}
+
+.prose-custom strong {
+  @apply text-neutral-900 font-semibold;
+}
